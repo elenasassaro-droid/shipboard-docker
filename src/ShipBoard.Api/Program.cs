@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ShipBoard.Api;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.AddServiceDefaults();
 
 // Con una connection string usa PostgreSQL, altrimenti un database in memoria.
 // Cosi' l'app parte con un semplice `dotnet run`, anche senza Docker.

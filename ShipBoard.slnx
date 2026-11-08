@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/ShipBoard.Api/ShipBoard.Api.csproj" />
+    <Project Path="src/ShipBoard.AppHost/ShipBoard.AppHost.csproj" />
+    <Project Path="src/ShipBoard.ServiceDefaults/ShipBoard.ServiceDefaults.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/ShipBoard.Api.IntegrationTests/ShipBoard.Api.IntegrationTests.csproj" />
