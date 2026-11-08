@@ -25,4 +25,4 @@ Endpoint utili: `/info` (dove gira l'app), `/health`, `/tickets`.
 ## Lab di oggi
 
 Le istruzioni sono in [docs/lab-docker.md](docs/lab-docker.md).
-Se resti indietro, ogni passo ha un tag con la soluzione: `git checkout step-02` e riparti da li'.
+Se resti indietro, ogni passo ha un branch con la soluzione: `git fetch origin && git checkout origin/step-02 -- .` e riparti da li'.

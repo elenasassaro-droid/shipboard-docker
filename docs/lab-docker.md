@@ -4,10 +4,10 @@ Oggi ShipBoard passa da "gira sul mio PC" a "gira ovunque": container, dipendenz
 
 **Regole**
 - Lavorate a coppie, una issue per esercizio sul vostro board, una PR per esercizio. La CI deve restare verde.
-- Se restate indietro, ogni esercizio ha un tag con la soluzione. Per riallinearvi:
+- Se restate indietro, ogni esercizio ha un branch con la soluzione (`step-01` ... `step-05`). Per riallinearvi:
   ```bash
-  git fetch --tags
-  git checkout step-02 -- .     # copia i file della soluzione nella vostra branch
+  git fetch origin
+  git checkout origin/step-02 -- .     # copia i file della soluzione nella vostra branch
   ```
 - LLM: fatevi spiegare gli errori, non fatevi scrivere il Dockerfile.
 
