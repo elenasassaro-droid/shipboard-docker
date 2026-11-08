@@ -1,0 +1,15 @@
+server {
+    listen 8080;
+    root /usr/share/nginx/html;
+
+    # /api/tickets -> ${API_URL}/tickets
+    location /api/ {
+        proxy_pass ${API_URL}/;
+        proxy_ssl_server_name on;
+    }
+
+    # Single page application: ogni rotta sconosciuta torna a index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
