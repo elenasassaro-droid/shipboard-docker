@@ -8,7 +8,7 @@ Bacheca di ticket usata nel corso **Modern DevOps** (ITS Mario Volpato).
 | `tests/ShipBoard.Api.Tests` | Test xUnit con il database in memoria |
 | `web` | Frontend Angular |
 | `.github/workflows` | Pipeline CI |
-| `docs/` | Istruzioni dei lab |
+| `docs/` | Istruzioni dei lab ed esempi |
 
 ## Avvio in locale
 
