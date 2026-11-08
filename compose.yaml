@@ -1,0 +1,38 @@
+# docker compose up --build  ->  frontend su http://localhost:8080
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: shipboard
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-solo-per-sviluppo}
+      POSTGRES_DB: shipboard
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shipboard"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build: ./src/ShipBoard.Api
+    environment:
+      # "db" e' il nome del servizio: compose lo risolve come un hostname
+      ConnectionStrings__shipboard: Host=db;Database=shipboard;Username=shipboard;Password=${POSTGRES_PASSWORD:-solo-per-sviluppo}
+      APP_VERSION: compose
+    ports:
+      - "5080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: ./web
+    environment:
+      API_URL: http://api:8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+
+volumes:
+  db-data:
