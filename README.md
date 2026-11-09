@@ -25,4 +25,4 @@ Endpoint utili: `/info` (dove gira l'app), `/health`, `/tickets`.
 ## Lab di oggi
 
 Le istruzioni sono in [docs/lab-docker.md](docs/lab-docker.md).
-Se resti indietro, ogni passo ha un branch con la soluzione: `git fetch origin && git checkout origin/step-02 -- .` e riparti da li'.
+Se resti indietro, ogni passo ha un branch con la soluzione: `git remote add prof https://github.com/matteobortolazzo/shipboard-docker`, poi `git fetch prof && git checkout prof/step-02 -- .` e riparti da li'.

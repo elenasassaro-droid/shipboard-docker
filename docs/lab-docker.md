@@ -6,8 +6,9 @@ Oggi ShipBoard passa da "gira sul mio PC" a "gira ovunque": container, dipendenz
 - Lavorate a coppie, una issue per esercizio sul vostro board, una PR per esercizio. La CI deve restare verde.
 - Se restate indietro, ogni esercizio ha un branch con la soluzione (`step-01` ... `step-05`). Per riallinearvi:
   ```bash
-  git fetch origin
-  git checkout origin/step-02 -- .     # copia i file della soluzione nella vostra branch
+  git remote add prof https://github.com/matteobortolazzo/shipboard-docker   # una volta sola
+  git fetch prof
+  git checkout prof/step-02 -- .     # copia i file della soluzione nella vostra branch
   ```
 - LLM: fatevi spiegare gli errori, non fatevi scrivere il Dockerfile.
 
